@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gizlilik Politikası — Aura</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:#F7F7F7;color:#111;line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+  .topbar{background:#fff;border-bottom:1px solid #EBEBEB;padding:20px 24px}
+  .topbar-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+  .logo{position:relative;display:inline-block;padding:4px 12px;transform:rotate(-3deg);text-decoration:none;color:#111}
+  .logo::before{content:'';position:absolute;top:0;left:0;width:8px;height:8px;border-top:2px solid #111;border-left:2px solid #111}
+  .logo::after{content:'';position:absolute;bottom:0;right:0;width:8px;height:8px;border-bottom:2px solid #111;border-right:2px solid #111}
+  .logo-text{font-size:22px;font-weight:800;letter-spacing:-0.8px;line-height:1}
+  .back{font-size:14px;color:#737373;text-decoration:none;font-weight:500}
+  .back:hover{color:#111}
+  .wrap{max-width:720px;margin:0 auto;padding:56px 24px 80px;width:100%;flex:1}
+  h1{font-size:36px;font-weight:800;letter-spacing:-1px;margin-bottom:28px;line-height:1.1}
+  h2{font-size:20px;font-weight:800;letter-spacing:-0.4px;margin-top:36px;margin-bottom:12px}
+  p{font-size:16px;color:#111;margin-bottom:16px}
+  ul{list-style:none;margin-bottom:16px}
+  ul li{position:relative;padding-left:18px;font-size:16px;margin-bottom:8px}
+  ul li::before{content:'';position:absolute;left:0;top:11px;width:5px;height:5px;background:#1A8C4E;border-radius:50%}
+  .note{background:#E8F5EE;border-radius:12px;padding:16px 20px;margin-top:24px;font-size:14px;color:#1A8C4E;font-weight:600}
+  a{color:#1A8C4E;text-decoration:underline}
+  footer{margin-top:auto;padding:24px;text-align:center;color:#AAA;font-size:13px;border-top:1px solid #EBEBEB;background:#fff}
+  .meta{font-size:14px;color:#737373;margin-bottom:8px}
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a class="logo" href="./index.html"><span class="logo-text">aura</span></a>
+      <a class="back" href="./index.html">Ana sayfa</a>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <p class="meta">Yürürlük: 18 Mayıs 2026</p>
+    <h1>Gizlilik Politikası</h1>
+
+    <p>Aura, kişisel verilerini korumayı önemser. Bu politika, hangi verilerin işlendiğini ve nasıl kullanıldığını açıklar.</p>
+
+    <h2>Hesap yok, anonim kullanım</h2>
+    <p>
+      Aura'yı kullanmak için hesap açmana, e-posta vermene veya kimlik bilgilerini paylaşmana gerek yoktur. Cihazına özel anonim bir kimlik üretilir ve sadece o cihazda kalır.
+    </p>
+
+    <h2>Fotoğrafların</h2>
+    <ul>
+      <li>Fotoğrafların yalnızca senin telefonunda saklanır.</li>
+      <li>Analiz için fotoğrafın AI sağlayıcılara (Anthropic ve Google) gönderilir, sadece anlık olarak işlenir, kaydedilmez.</li>
+      <li>Aura sunucusunda fotoğrafın depolanmaz.</li>
+      <li>Analiz geçmişini ve fotoğrafları istediğin zaman "Tüm verilerimi sil" ile silebilirsin.</li>
+    </ul>
+
+    <h2>Analiz sonuçların</h2>
+    <p>
+      Analiz sonuçları (skor, öneriler, yüz tipi, vücut tipi) yalnızca senin telefonunda saklanır. Aura sunucusuna gönderilmez. Aura'yı silersen veriler de silinir.
+    </p>
+
+    <h2>Üçüncü taraf hizmetler</h2>
+    <ul>
+      <li><strong>Anthropic Claude API:</strong> Premium analiz için fotoğraf işleme. Anthropic gizlilik politikası geçerlidir.</li>
+      <li><strong>Google Gemini API:</strong> Ücretsiz analiz ve AI poz görseli üretimi için. Google gizlilik politikası geçerlidir.</li>
+      <li><strong>RevenueCat:</strong> Satın alma yönetimi için anonim cihaz kimliği kullanılır. Kişisel bilgi paylaşılmaz.</li>
+    </ul>
+
+    <h2>Çocuklar</h2>
+    <p>
+      Aura 13 yaş altı kullanıcılar için tasarlanmamıştır. Çocuğunuz Aura'yı kullanıyorsa kullanım koşullarını birlikte değerlendirmeniz önerilir.
+    </p>
+
+    <h2>Veri silme</h2>
+    <p>
+      İstediğin zaman Profil sekmesinden "Düzenle" sayfasına gidip "Tüm verilerimi sil" seçeneğiyle profilini, analiz geçmişini ve fotoğraflarını kalıcı olarak silebilirsin. Bu işlem geri alınamaz.
+    </p>
+
+    <h2>Değişiklikler</h2>
+    <p>
+      Bu politika güncellendiğinde uygulama sürümünde belirtilir. Önemli değişikliklerde kullanıcıya bildirim gösterilir.
+    </p>
+
+    <div class="note">
+      Bu politika güncellendiğinde uygulama sürümünde belirtilir.
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Aura
+  </footer>
+</body>
+</html>
