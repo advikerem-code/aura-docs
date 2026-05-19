@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Destek — Aura</title>
+<title>Destek · Aura</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
@@ -17,16 +17,15 @@
   .back{font-size:14px;color:#737373;text-decoration:none;font-weight:500}
   .back:hover{color:#111}
   .wrap{max-width:720px;margin:0 auto;padding:56px 24px 80px;width:100%;flex:1}
-  h1{font-size:36px;font-weight:800;letter-spacing:-1px;margin-bottom:14px;line-height:1.1}
-  .lede{font-size:17px;color:#737373;margin-bottom:32px}
-  .mail-card{background:#111;border-radius:14px;padding:24px;margin-bottom:36px;display:block;text-decoration:none;color:inherit}
-  .mail-card:hover{transform:translateY(-1px)}
-  .mail-label{font-size:18px;font-weight:800;color:#fff;margin-bottom:4px;display:block}
-  .mail-addr{font-size:15px;color:rgba(255,255,255,0.7)}
-  h2{font-size:22px;font-weight:800;letter-spacing:-0.5px;margin-top:36px;margin-bottom:20px}
-  .qa{background:#fff;border:1px solid #EBEBEB;border-radius:12px;padding:18px 22px;margin-bottom:12px}
-  .q{font-size:16px;font-weight:700;margin-bottom:6px;color:#111}
-  .a{font-size:15px;color:#737373;line-height:1.55}
+  h1{font-size:36px;font-weight:800;letter-spacing:-1px;margin-bottom:20px;line-height:1.1}
+  h2{font-size:20px;font-weight:800;letter-spacing:-0.4px;margin-top:36px;margin-bottom:12px}
+  p{font-size:16px;color:#111;margin-bottom:16px}
+  .mail-btn{display:block;background:#111;color:#fff;border-radius:14px;padding:20px 24px;text-decoration:none;margin:24px 0 32px;transition:transform 0.15s}
+  .mail-btn:hover{transform:translateY(-1px)}
+  .mail-btn-label{font-size:18px;font-weight:800;margin-bottom:4px}
+  .mail-btn-addr{font-size:15px;color:rgba(255,255,255,0.7);font-weight:500}
+  .qa{font-size:16px;color:#111;margin-bottom:16px}
+  .qa b{font-weight:700;display:block;margin-bottom:4px}
   .note{background:#E8F5EE;border-radius:12px;padding:16px 20px;margin-top:32px;font-size:14px;color:#1A8C4E;font-weight:600}
   a{color:#1A8C4E;text-decoration:underline}
   footer{margin-top:auto;padding:24px;text-align:center;color:#AAA;font-size:13px;border-top:1px solid #EBEBEB;background:#fff}
@@ -42,42 +41,32 @@
 
   <div class="wrap">
     <h1>Destek</h1>
-    <p class="lede">Aura'yla ilgili sıkça sorulan sorular ve hızlı çözümler.</p>
+    <p>Soru, sorun veya geri bildirim için bize yaz. Genelde 1-2 iş günü içinde döneriz.</p>
+
+    <a class="mail-btn" href="mailto:aurapose.contact@gmail.com?subject=Aura%20Destek%20Talebi">
+      <div class="mail-btn-label">E-posta gönder</div>
+      <div class="mail-btn-addr">aurapose.contact@gmail.com</div>
+    </a>
 
     <h2>Sıkça sorulanlar</h2>
 
-    <div class="qa">
-      <div class="q">Analiz ücretsiz mi?</div>
-      <div class="a">İlk analiz tamamen ücretsiz. Sonraki analizler için haftada 3 ücretsiz hak verilir. Premium ile sınırsız ve daha derin analiz açılır.</div>
-    </div>
+    <p class="qa">
+      <b>Verilerim nereye gidiyor?</b>
+      Fotoğrafların ve analizlerin yalnızca senin telefonunda saklanır. Aura sunucusunda hiç tutulmaz.
+    </p>
 
-    <div class="qa">
-      <div class="q">Verilerim nereye gidiyor?</div>
-      <div class="a">Fotoğrafların ve analizlerin yalnızca senin telefonunda saklanır. Aura sunucusunda hiç tutulmaz.</div>
-    </div>
+    <p class="qa">
+      <b>Satın aldığım paket iade edilir mi?</b>
+      İade işlemleri Apple App Store politikalarına tabidir. reportaproblem.apple.com adresinden talep oluşturabilirsin.
+    </p>
 
-    <div class="qa">
-      <div class="q">Satın aldığım paket iade edilir mi?</div>
-      <div class="a">İade işlemleri Apple App Store politikalarına tabidir. <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> adresinden talep oluşturabilirsin.</div>
-    </div>
-
-    <div class="qa">
-      <div class="q">Aboneliği nasıl iptal ederim?</div>
-      <div class="a">iOS Ayarlar uygulamasından Apple ID, Abonelikler bölümünden Aura aboneliğini istediğin zaman iptal edebilirsin.</div>
-    </div>
-
-    <div class="qa">
-      <div class="q">İnsan olmayan fotoğraf yüklersem ne olur?</div>
-      <div class="a">Aura sadece insan portresi içeren fotoğrafları analiz eder. Manzara, nesne veya hayvan fotoğrafı yüklersen hata mesajı çıkar, hakkın düşmez.</div>
-    </div>
-
-    <div class="qa">
-      <div class="q">Eski analizlerimi silebilir miyim?</div>
-      <div class="a">Evet. Profil sekmesinden Düzenle sayfasına gidip Tüm verilerimi sil seçeneğini kullanabilirsin. Bu işlem geri alınamaz.</div>
-    </div>
+    <p class="qa">
+      <b>Aboneliği nasıl iptal ederim?</b>
+      iOS Ayarlar, Apple ID, Abonelikler bölümünden Aura aboneliğini istediğin zaman iptal edebilirsin.
+    </p>
 
     <div class="note">
-      Sorun çözülmediyse Aura uygulaması içinden Profil sekmesi, Destek bölümünden bize ulaşabilirsin.
+      Yanıt süresi 1-2 iş günü.
     </div>
   </div>
 
