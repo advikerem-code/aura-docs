@@ -5,17 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Destek · Aura</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+(function(){try{
+  var k='aura_docs_lang',s=localStorage.getItem(k);
+  var l=s||((navigator.language||'tr').toLowerCase().slice(0,2)==='en'?'en':'tr');
+  document.documentElement.classList.add('lang-'+l);
+  document.documentElement.lang=l;
+}catch(e){document.documentElement.classList.add('lang-tr');}})();
+</script>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:#F7F7F7;color:#111;line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
   .topbar{background:#fff;border-bottom:1px solid #EBEBEB;padding:20px 24px}
-  .topbar-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+  .topbar-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .topbar-right{display:flex;align-items:center;gap:16px}
   .logo{position:relative;display:inline-block;padding:4px 12px;transform:rotate(-3deg);text-decoration:none;color:#111}
   .logo::before{content:'';position:absolute;top:0;left:0;width:8px;height:8px;border-top:2px solid #111;border-left:2px solid #111}
   .logo::after{content:'';position:absolute;bottom:0;right:0;width:8px;height:8px;border-bottom:2px solid #111;border-right:2px solid #111}
   .logo-text{font-size:22px;font-weight:800;letter-spacing:-0.8px;line-height:1}
   .back{font-size:14px;color:#737373;text-decoration:none;font-weight:500}
   .back:hover{color:#111}
+  .langswitch{display:inline-flex;gap:2px;background:#EFEFEF;border-radius:999px;padding:3px}
+  .langswitch button{border:none;background:transparent;font-family:inherit;font-size:13px;font-weight:700;color:#737373;padding:5px 12px;border-radius:999px;cursor:pointer}
+  .langswitch button.active{background:#fff;color:#111;box-shadow:0 1px 2px rgba(0,0,0,0.08)}
   .wrap{max-width:720px;margin:0 auto;padding:56px 24px 80px;width:100%;flex:1}
   h1{font-size:36px;font-weight:800;letter-spacing:-1px;margin-bottom:20px;line-height:1.1}
   h2{font-size:20px;font-weight:800;letter-spacing:-0.4px;margin-top:36px;margin-bottom:12px}
@@ -29,49 +41,101 @@
   .note{background:#E8F5EE;border-radius:12px;padding:16px 20px;margin-top:32px;font-size:14px;color:#1A8C4E;font-weight:600}
   a{color:#1A8C4E;text-decoration:underline}
   footer{margin-top:auto;padding:24px;text-align:center;color:#AAA;font-size:13px;border-top:1px solid #EBEBEB;background:#fff}
+  .en{display:none}
+  html.lang-en .en{display:revert}
+  html.lang-en .tr{display:none}
 </style>
 </head>
-<body>
+<body data-title-tr="Destek · Aura" data-title-en="Support · Aura">
   <div class="topbar">
     <div class="topbar-inner">
       <a class="logo" href="./index.html"><span class="logo-text">aura</span></a>
-      <a class="back" href="./index.html">Ana sayfa</a>
+      <div class="topbar-right">
+        <div class="langswitch">
+          <button type="button" data-lang="tr">TR</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <a class="back" href="./index.html"><span class="tr">Ana sayfa</span><span class="en">Home</span></a>
+      </div>
     </div>
   </div>
 
   <div class="wrap">
-    <h1>Destek</h1>
-    <p>Soru, sorun veya geri bildirim için bize yaz. Genelde 1-2 iş günü içinde döneriz.</p>
+    <h1 class="tr">Destek</h1>
+    <h1 class="en">Support</h1>
+    <p class="tr">Soru, sorun veya geri bildirim için bize yaz. Genelde 1-2 iş günü içinde döneriz.</p>
+    <p class="en">Write to us with a question, issue, or feedback. We usually reply within 1-2 business days.</p>
 
-    <a class="mail-btn" href="mailto:aurapose.contact@gmail.com?subject=Aura%20Destek%20Talebi">
+    <a class="mail-btn tr" href="mailto:aurapose.contact@gmail.com?subject=Aura%20Destek%20Talebi">
       <div class="mail-btn-label">E-posta gönder</div>
       <div class="mail-btn-addr">aurapose.contact@gmail.com</div>
     </a>
+    <a class="mail-btn en" href="mailto:aurapose.contact@gmail.com?subject=Aura%20Support%20Request">
+      <div class="mail-btn-label">Send email</div>
+      <div class="mail-btn-addr">aurapose.contact@gmail.com</div>
+    </a>
 
-    <h2>Sıkça sorulanlar</h2>
+    <h2 class="tr">Sıkça sorulanlar</h2>
+    <h2 class="en">Frequently asked questions</h2>
 
-    <p class="qa">
+    <p class="qa tr">
       <b>Verilerim nereye gidiyor?</b>
       Fotoğrafların ve analizlerin yalnızca senin telefonunda saklanır. Aura sunucusunda hiç tutulmaz.
     </p>
+    <p class="qa en">
+      <b>Where does my data go?</b>
+      Your photos and analyses are stored only on your phone. Nothing is kept on an Aura server.
+    </p>
 
-    <p class="qa">
+    <p class="qa tr">
       <b>Satın aldığım paket iade edilir mi?</b>
       İade işlemleri Apple App Store politikalarına tabidir. reportaproblem.apple.com adresinden talep oluşturabilirsin.
     </p>
+    <p class="qa en">
+      <b>Can I get a refund for a purchase?</b>
+      Refunds are subject to Apple App Store policies. You can request one at reportaproblem.apple.com.
+    </p>
 
-    <p class="qa">
+    <p class="qa tr">
       <b>Aboneliği nasıl iptal ederim?</b>
       iOS Ayarlar, Apple ID, Abonelikler bölümünden Aura aboneliğini istediğin zaman iptal edebilirsin.
     </p>
+    <p class="qa en">
+      <b>How do I cancel my subscription?</b>
+      You can cancel your Aura subscription anytime under iOS Settings, Apple ID, Subscriptions.
+    </p>
 
-    <div class="note">
+    <div class="note tr">
       Yanıt süresi 1-2 iş günü.
+    </div>
+    <div class="note en">
+      Response time 1-2 business days.
     </div>
   </div>
 
   <footer>
     © 2026 Aura
   </footer>
+
+  <script>
+  (function(){
+    var k='aura_docs_lang';
+    function apply(l){
+      var h=document.documentElement;
+      h.classList.remove('lang-tr','lang-en');
+      h.classList.add('lang-'+l);
+      h.lang=l;
+      try{localStorage.setItem(k,l);}catch(e){}
+      var t=document.body.getAttribute('data-title-'+l);
+      if(t){document.title=t;}
+      var btns=document.querySelectorAll('.langswitch button');
+      for(var i=0;i<btns.length;i++){btns[i].classList.toggle('active',btns[i].getAttribute('data-lang')===l);}
+    }
+    var cur=document.documentElement.classList.contains('lang-en')?'en':'tr';
+    var btns=document.querySelectorAll('.langswitch button');
+    for(var i=0;i<btns.length;i++){btns[i].addEventListener('click',function(){apply(this.getAttribute('data-lang'));});}
+    apply(cur);
+  })();
+  </script>
 </body>
 </html>

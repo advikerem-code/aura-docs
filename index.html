@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Aura</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+(function(){try{
+  var k='aura_docs_lang',s=localStorage.getItem(k);
+  var l=s||((navigator.language||'tr').toLowerCase().slice(0,2)==='en'?'en':'tr');
+  document.documentElement.classList.add('lang-'+l);
+  document.documentElement.lang=l;
+}catch(e){document.documentElement.classList.add('lang-tr');}})();
+</script>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -15,6 +23,32 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+  }
+  .langswitch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-flex;
+    gap: 2px;
+    background: #EFEFEF;
+    border-radius: 999px;
+    padding: 3px;
+  }
+  .langswitch button {
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    color: #737373;
+    padding: 5px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .langswitch button.active {
+    background: #fff;
+    color: #111;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
   }
   .wrap {
     max-width: 720px;
@@ -112,35 +146,53 @@
     color: #1A8C4E;
     text-decoration: none;
   }
+  .en { display: none; }
+  html.lang-en .en { display: revert; }
+  html.lang-en .tr { display: none; }
 </style>
 </head>
-<body>
+<body data-title-tr="Aura" data-title-en="Aura">
+  <div class="langswitch">
+    <button type="button" data-lang="tr">TR</button>
+    <button type="button" data-lang="en">EN</button>
+  </div>
+
   <div class="wrap">
     <div class="logo"><span class="logo-text">aura</span></div>
-    <h1>Aura, <span class="hl">poz koçun</span></h1>
-    <p class="lede">
+    <h1 class="tr">Aura, <span class="hl">poz koçun</span></h1>
+    <h1 class="en">Aura, <span class="hl">your pose coach</span></h1>
+    <p class="lede tr">
       Fotoğrafına bakar, sana özel poz önerir. Önerilen pozun fotoğrafına uygulanmış halini görürsün. Klişe değil, senin fotoğrafına özel.
+    </p>
+    <p class="lede en">
+      It looks at your photo and suggests poses made for you. You see the suggested pose applied to your own photo. Not generic, tailored to your photo.
     </p>
 
     <div class="cards">
       <a class="card" href="./privacy.html">
         <div class="card-text">
-          <h2>Gizlilik Politikası</h2>
-          <p>Verilerin nasıl işlenir, hangi sağlayıcılar kullanılır</p>
+          <h2 class="tr">Gizlilik Politikası</h2>
+          <h2 class="en">Privacy Policy</h2>
+          <p class="tr">Verilerin nasıl işlenir, hangi sağlayıcılar kullanılır</p>
+          <p class="en">How your data is handled, which providers are used</p>
         </div>
         <span class="arrow">→</span>
       </a>
       <a class="card" href="./terms.html">
         <div class="card-text">
-          <h2>Kullanım Şartları</h2>
-          <p>Aura'yı kullanım koşulları</p>
+          <h2 class="tr">Kullanım Şartları</h2>
+          <h2 class="en">Terms of Use</h2>
+          <p class="tr">Aura'yı kullanım koşulları</p>
+          <p class="en">The terms for using Aura</p>
         </div>
         <span class="arrow">→</span>
       </a>
       <a class="card" href="./support.html">
         <div class="card-text">
-          <h2>Destek</h2>
-          <p>Soruların için bize ulaş</p>
+          <h2 class="tr">Destek</h2>
+          <h2 class="en">Support</h2>
+          <p class="tr">Soruların için bize ulaş</p>
+          <p class="en">Reach us with your questions</p>
         </div>
         <span class="arrow">→</span>
       </a>
@@ -150,5 +202,26 @@
   <footer>
     © 2026 Aura
   </footer>
+
+  <script>
+  (function(){
+    var k='aura_docs_lang';
+    function apply(l){
+      var h=document.documentElement;
+      h.classList.remove('lang-tr','lang-en');
+      h.classList.add('lang-'+l);
+      h.lang=l;
+      try{localStorage.setItem(k,l);}catch(e){}
+      var t=document.body.getAttribute('data-title-'+l);
+      if(t){document.title=t;}
+      var btns=document.querySelectorAll('.langswitch button');
+      for(var i=0;i<btns.length;i++){btns[i].classList.toggle('active',btns[i].getAttribute('data-lang')===l);}
+    }
+    var cur=document.documentElement.classList.contains('lang-en')?'en':'tr';
+    var btns=document.querySelectorAll('.langswitch button');
+    for(var i=0;i<btns.length;i++){btns[i].addEventListener('click',function(){apply(this.getAttribute('data-lang'));});}
+    apply(cur);
+  })();
+  </script>
 </body>
 </html>

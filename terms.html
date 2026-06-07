@@ -5,17 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kullanım Şartları · Aura</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+(function(){try{
+  var k='aura_docs_lang',s=localStorage.getItem(k);
+  var l=s||((navigator.language||'tr').toLowerCase().slice(0,2)==='en'?'en':'tr');
+  document.documentElement.classList.add('lang-'+l);
+  document.documentElement.lang=l;
+}catch(e){document.documentElement.classList.add('lang-tr');}})();
+</script>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:#F7F7F7;color:#111;line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
   .topbar{background:#fff;border-bottom:1px solid #EBEBEB;padding:20px 24px}
-  .topbar-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+  .topbar-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .topbar-right{display:flex;align-items:center;gap:16px}
   .logo{position:relative;display:inline-block;padding:4px 12px;transform:rotate(-3deg);text-decoration:none;color:#111}
   .logo::before{content:'';position:absolute;top:0;left:0;width:8px;height:8px;border-top:2px solid #111;border-left:2px solid #111}
   .logo::after{content:'';position:absolute;bottom:0;right:0;width:8px;height:8px;border-bottom:2px solid #111;border-right:2px solid #111}
   .logo-text{font-size:22px;font-weight:800;letter-spacing:-0.8px;line-height:1}
   .back{font-size:14px;color:#737373;text-decoration:none;font-weight:500}
   .back:hover{color:#111}
+  .langswitch{display:inline-flex;gap:2px;background:#EFEFEF;border-radius:999px;padding:3px}
+  .langswitch button{border:none;background:transparent;font-family:inherit;font-size:13px;font-weight:700;color:#737373;padding:5px 12px;border-radius:999px;cursor:pointer}
+  .langswitch button.active{background:#fff;color:#111;box-shadow:0 1px 2px rgba(0,0,0,0.08)}
   .wrap{max-width:720px;margin:0 auto;padding:56px 24px 80px;width:100%;flex:1}
   h1{font-size:36px;font-weight:800;letter-spacing:-1px;margin-bottom:28px;line-height:1.1}
   h2{font-size:20px;font-weight:800;letter-spacing:-0.4px;margin-top:36px;margin-bottom:12px}
@@ -24,38 +36,80 @@
   a{color:#1A8C4E;text-decoration:underline}
   footer{margin-top:auto;padding:24px;text-align:center;color:#AAA;font-size:13px;border-top:1px solid #EBEBEB;background:#fff}
   .meta{font-size:14px;color:#737373;margin-bottom:8px}
+  .en{display:none}
+  html.lang-en .en{display:revert}
+  html.lang-en .tr{display:none}
 </style>
 </head>
-<body>
+<body data-title-tr="Kullanım Şartları · Aura" data-title-en="Terms of Use · Aura">
   <div class="topbar">
     <div class="topbar-inner">
       <a class="logo" href="./index.html"><span class="logo-text">aura</span></a>
-      <a class="back" href="./index.html">Ana sayfa</a>
+      <div class="topbar-right">
+        <div class="langswitch">
+          <button type="button" data-lang="tr">TR</button>
+          <button type="button" data-lang="en">EN</button>
+        </div>
+        <a class="back" href="./index.html"><span class="tr">Ana sayfa</span><span class="en">Home</span></a>
+      </div>
     </div>
   </div>
 
   <div class="wrap">
-    <p class="meta">Yürürlük: 19 Mayıs 2026</p>
-    <h1>Kullanım Şartları</h1>
+    <p class="meta tr">Yürürlük: 19 Mayıs 2026</p>
+    <p class="meta en">Effective: 19 May 2026</p>
+    <h1 class="tr">Kullanım Şartları</h1>
+    <h1 class="en">Terms of Use</h1>
 
-    <p>Aura, fotoğrafçılık ve poz koçluğu sunan bir yardımcıdır. Tıbbi, psikolojik veya estetik tavsiye değildir.</p>
+    <p class="tr">Aura, fotoğrafçılık ve poz koçluğu sunan bir yardımcıdır. Tıbbi, psikolojik veya estetik tavsiye değildir.</p>
+    <p class="en">Aura is an assistant that offers photography and pose coaching. It is not medical, psychological, or aesthetic advice.</p>
 
-    <h2>Yaş</h2>
-    <p>13 yaş ve üzeri kullanıcılar içindir. 18 yaş altı için ebeveyn onayı önerilir.</p>
+    <h2 class="tr">Yaş</h2>
+    <h2 class="en">Age</h2>
+    <p class="tr">13 yaş ve üzeri kullanıcılar içindir. 18 yaş altı için ebeveyn onayı önerilir.</p>
+    <p class="en">It is for users aged 13 and over. Parental consent is recommended for those under 18.</p>
 
-    <h2>İçerik</h2>
-    <p>Sadece insan portresi içeren fotoğrafları yükle. Çıplaklık, şiddet, telif hakkı sahibi olmadığın görseller ve yasal olmayan içerikler yasaktır.</p>
+    <h2 class="tr">İçerik</h2>
+    <h2 class="en">Content</h2>
+    <p class="tr">Sadece insan portresi içeren fotoğrafları yükle. Çıplaklık, şiddet, telif hakkı sahibi olmadığın görseller ve yasal olmayan içerikler yasaktır.</p>
+    <p class="en">Upload only photos that contain a human portrait. Nudity, violence, images you do not own the rights to, and unlawful content are prohibited.</p>
 
-    <h2>Satın almalar</h2>
-    <p>Premium paketler Apple App Store üzerinden işlenir. İade ve abonelik iptalleri Apple politikalarına tabidir.</p>
+    <h2 class="tr">Satın almalar</h2>
+    <h2 class="en">Purchases</h2>
+    <p class="tr">Premium paketler Apple App Store üzerinden işlenir. İade ve abonelik iptalleri Apple politikalarına tabidir.</p>
+    <p class="en">Premium packages are processed through the Apple App Store. Refunds and subscription cancellations are subject to Apple policies.</p>
 
-    <div class="note">
+    <div class="note tr">
       İletişim: <a href="mailto:aurapose.contact@gmail.com">aurapose.contact@gmail.com</a>
+    </div>
+    <div class="note en">
+      Contact: <a href="mailto:aurapose.contact@gmail.com">aurapose.contact@gmail.com</a>
     </div>
   </div>
 
   <footer>
     © 2026 Aura
   </footer>
+
+  <script>
+  (function(){
+    var k='aura_docs_lang';
+    function apply(l){
+      var h=document.documentElement;
+      h.classList.remove('lang-tr','lang-en');
+      h.classList.add('lang-'+l);
+      h.lang=l;
+      try{localStorage.setItem(k,l);}catch(e){}
+      var t=document.body.getAttribute('data-title-'+l);
+      if(t){document.title=t;}
+      var btns=document.querySelectorAll('.langswitch button');
+      for(var i=0;i<btns.length;i++){btns[i].classList.toggle('active',btns[i].getAttribute('data-lang')===l);}
+    }
+    var cur=document.documentElement.classList.contains('lang-en')?'en':'tr';
+    var btns=document.querySelectorAll('.langswitch button');
+    for(var i=0;i<btns.length;i++){btns[i].addEventListener('click',function(){apply(this.getAttribute('data-lang'));});}
+    apply(cur);
+  })();
+  </script>
 </body>
 </html>
